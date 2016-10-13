@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<title>senseURwater</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-colors-highway.css">
+<link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link href="stylesheets/pizza.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif;}
+.w3-sidenav a {padding:16px;}
+
+</style>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["calendar"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+   function drawChart() {
+       var dataTable = new google.visualization.DataTable();
+       dataTable.addColumn({ type: 'date', id: 'Date' });
+       dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
+       dataTable.addRows([
+          [ new Date(2015, 3, 13), 373 ],
+          [ new Date(2015, 3, 14), 380 ],
+          [ new Date(2015, 3, 15), 380 ],
+          [ new Date(2015, 4, 16), 381 ],
+          [ new Date(2015, 3, 17), 382 ],
+          // Many rows omitted for brevity.
+          [ new Date(2016, 9, 4), 387 ],
+          [ new Date(2016, 9, 5), 387 ],
+          [ new Date(2016, 5, 12), 382 ],
+          [ new Date(2016, 6, 13), 309 ],
+          [ new Date(2016, 9, 19), 383 ],
+          [ new Date(2016, 7, 23), 384 ],
+          [ new Date(2016, 9, 24), 383 ],
+          [ new Date(2016, 12, 24), 383 ],
+          [ new Date(2016, 9, 30), 345 ],
+          [ new Date(2014, 9, 30), 345 ],
+          [ new Date(2014, 9, 30), 345 ],
+          [ new Date(2014, 9, 30), 345 ],
+          [ new Date(2014, 9, 30), 345 ]
+
+        ]);
+
+       var chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
+
+       var options = {
+         title: "Gallons used",
+         height: 850,
+       };
+
+       chart.draw(dataTable, options);
+   }
+    </script>
+
+<body>
+
+<!-- Side Navigation -->
+<nav class="w3-sidenav w3-collapse w3-white w3-animate-left w3-card-2" style="z-index:3;width:320px;" id="mySidenav">
+  <div class="w3-border-bottom w3-large w3-grey" style="padding-top: 10px;"><img src="img/cheesylogo.png" style="width:90%;"></div>
+  <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu"
+  class="w3-hide-large w3-closenav w3-large">Close <i class="fa fa-remove"></i></a>
+  <a class="w3-hover-light-blue" href="index.html" onclick="openMail('Home'); w3_close();"><i class="fa fa-home w3-padding-right" style="font-size: x-large;"></i><span class="w3-xlarge">Home</span></a>
+  <a class="w3-hover-light-blue" href="year.html"><i class="fa fa-bar-chart w3-padding-right" style="font-size: x-large;"></i><span class="w3-xlarge">Year Overview</span></a>
+  <a class="w3-hover-light-blue" href="javascript:void(0)" onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-trophy w3-padding-right" style="font-size: x-large;"></i><span class="w3-xlarge">Usage Goals</span></a>
+  <a class="w3-hover-light-blue" href="javascript:void(0)" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-lightbulb-o w3-padding-right" style="font-size: x-large;"></i><span class="w3-xlarge">Usage Tips</span></a>
+  <a class="w3-hover-light-blue" href="javascript:void(0)"><i class="fa fa-cog w3-padding-right" style="font-size: x-large;"></i><span class="w3-xlarge">Settings</span></a>
+  <div class="w3-card-2 w3-lime test">
+    <div class="w3-container w3-pink w3-center w3-xlarge"> <span class="w3-large">Profile:</span> <br> Sami Glass</div>
+    <div class= "w3-container w3-light-grey"><img src="img/profile.png" alt="Avatar" style="width:100%;opacity:0.85"></div>
+    <div class="w3-container w3-center">
+    <h4><b>Family Size:&nbsp;&nbsp; 4</b></h4>
+    <h4><b>Gender: &nbsp;&nbsp;Female</b></h4>
+    <h4><b> Location: &nbsp;&nbsp;Cuyahoga Falls</b></h4>
+    </div>
+  </div>
+
+</nav>
+
+<!-- Modal that pops up when you click on "New Message" -->
+<div id="id01" class="w3-modal" style="z-index:4">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-padding w3-cyan">
+        <h2 style="color: white;"> Tips to Conserve Water</h2>
+       <span onclick="document.getElementById('id01').style.display='none'" class="w3-right w3-xxlarge w3-closebtn"><i class="fa fa-remove"></i></span>
+  </div>
+       <div class="w3-panel w3-pale-red w3-leftbar w3-rightbar w3-border-red">
+         <h4><strong>Take shorter showers</strong></h4>
+         <p>One way to cut down on water use is to turn off the shower after soaping up, then turn it back on to rinse. A four-minute shower uses approximately 20 to 40 gallons of water.</p>
+          </div>
+         <div class="w3-panel w3-pale-blue w3-leftbar w3-rightbar w3-border-blue">
+<h4><strong>Minimize use of kitchen sink garbage disposal units</strong></h4>
+  <p>In-sink 'garburators' require lots of water to operate properly,
+    and also add considerably to the volume of solids in a septic tank which can lead to maintenance problems.
+    Start a compost pile as an alternate method of disposing food waste. </p>
+</div>
+<div class="w3-panel w3-pale-green w3-leftbar w3-rightbar w3-border-green">
+<h4><strong>Keep a bottle of drinking water in the fridge</strong></h4>
+<p>Running tap water to cool it off for drinking water is wasteful.
+  Store drinking water in the fridge in a safe drinking bottle. If you are filling water bottles to bring along on outdoor hikes,
+  consider buying a LifeStraw personal water filter which enables users to drink
+  water safely from rivers or lakes or any available body of water.</p>
+</div>
+<div class="w3-panel w3-pale-yellow w3-leftbar w3-rightbar w3-border-yellow">
+<h4><strong>Don't run the hose while washing your car</strong></h4>
+<p>Clean the car using a pail of soapy water. Use the hose only for rinsing - this simple practice can save as much as 150 gallons when washing a car. Use a
+  spray nozzle when rinsing for more efficient use of water. Better yet, use a waterless car washing system; there are several brands,
+  such as EcoTouch, which are now on the market.</p>
+</div>
+<br>
+
+  </div>
+</div>
+
+<div id="id02" class="w3-modal" style="z-index:4">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-padding w3-cyan">
+        <h2 style="color: white;"> Goals</h2>
+       <span onclick="document.getElementById('id02').style.display='none'" class="w3-right w3-xxlarge w3-closebtn"><i class="fa fa-remove"></i></span>
+  </div>
+       <div class="w3-panel w3-pale-red w3-leftbar w3-rightbar w3-border-red">
+         <h4><strong>6 Months of hitting your goal</strong></h4>
+         <div class="w3-progress-container w3-light-blue">
+            <div class="w3-progressbar w3-blue" style="width:75%"></div>
+          </div>
+          <br>
+        </div>
+         <div class="w3-panel w3-pale-blue w3-leftbar w3-rightbar w3-border-blue">
+           <h4><strong>2 Months of not using Outside Water</strong></h4>
+           <div class="w3-progress-container w3-light-green">
+              <div class="w3-progressbar w3-green" style="width:35%"></div>
+            </div>
+          <br>
+       </div>
+<div class="w3-panel w3-pale-green w3-leftbar w3-rightbar w3-border-green">
+  <h4><strong>Kitchen Water Goals</strong></h4>
+  <div class="w3-progress-container w3-light-yellow">
+     <div class="w3-progressbar w3-yellow" style="width:45%"></div>
+   </div>
+   <br>
+</div>
+<div class="w3-panel w3-pale-yellow w3-leftbar w3-rightbar w3-border-yellow">
+  <h4><strong>Didn't use Faucet all Week</strong></h4>
+  <div class="w3-progress-container w3-light-red">
+     <div class="w3-progressbar w3-red" style="width:60%"></div>
+   </div>
+   <br>
+</div>
+<br>
+
+  </div>
+</div>
+
+<!-- Overlay effect when opening the side navigation on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay"></div>
+
+<!-- Page content -->
+<div class="w3-main" style="margin-left:320px; overflow-y:hidden; overflow-x:scroll; overflow-y:scroll;">
+<i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
+<a href="javascript:void(0)" class="w3-hide-large w3-right w3-margin-top w3-margin-right" onclick="document.getElementById('id01').style.display='block'"></a>
+
+
+  <div class="w3-container w3-purple w3-card-2" style="height:100%; width:100%;">
+    <h1 style="color: white;"> Year Overview</h1>
+    </div>
+    <div id="calendar_basic" style="margin-top: 20px; margin-left: 20px; width: 1000px; height: 950px;"></div>
+
+
+
+<script>
+
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+function myFunc(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-red";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-cyan", "");
+    }
+}
+
+openMail("Home")
+function openMail(personName) {
+  var i;
+  var x = document.getElementsByClassName("person");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x = document.getElementsByClassName("test");
+  for (i = 0; i < x.length; i++) {
+     x[i].className = x[i].className.replace(" w3-light-blue", "");
+  }
+  document.getElementById(personName).style.display = "block";
+}
+</script>
+
+</body>
+</html>
